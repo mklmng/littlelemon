@@ -5,7 +5,7 @@ class Menu(models.Model):
   ID = models.AutoField(primary_key=True,null=False,unique=True)
   Title = models.CharField(max_length=255)
   Price = models.DecimalField(max_digits=10,decimal_places=2,null=False)
-  Inventory = models.IntegerField(default=5)
+  Inventory = models.IntegerField(default=5,null=False)
 
   def __str__(self):
     return self.Title
