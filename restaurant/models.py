@@ -8,7 +8,7 @@ class Menu(models.Model):
   Inventory = models.IntegerField(default=5,null=False)
 
   def __str__(self):
-    return self.Title
+    return f'{self.Title} : {str(self.Price)}'
 
 class Booking(models.Model):
   ID = models.AutoField(primary_key=True,null=False,unique=True)
@@ -18,4 +18,3 @@ class Booking(models.Model):
 
   def __str__(self):
     return self.Name
-
